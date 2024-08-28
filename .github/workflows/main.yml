@@ -22,19 +22,10 @@ jobs:
           terraform_version: 1.9.5  # Specify your Terraform version
 
       - name: Terraform Init
-        env:
-          name: AWS_SECRET_KEY_ID
-          name1: AWS_SECRET_ACCESS_KEY
         run: terraform init
 
       - name: Terraform Plan
-        env:
-          name: AWS_SECRET_KEY_ID
-          name1: AWS_SECRET_ACCESS_KEY
         run: terraform plan
 
       - name: Terraform Apply
-        env:
-          name: AWS_SECRET_KEY_ID
-          name1: AWS_SECRET_ACCESS_KEY
         run: terraform apply -auto-approve
